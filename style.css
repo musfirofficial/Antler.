@@ -1,0 +1,527 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Poppins', sans-serif; 
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 10%;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #072541;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em;
+  text-transform: capitalize;
+  letter-spacing: 8px;
+  font-weight: 600;
+  color: rgb(213, 222, 231);
+}
+
+#logo::first-letter {
+  color: #ffb000;
+}
+.logo img {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2em;
+  color: white;
+  transition: 0.5s;
+}
+
+.navtoggle {
+  display: none;
+  cursor: pointer;
+}
+.nav a:hover {
+  border-bottom: 2px solid #ffb000;
+}
+
+.navtoggle {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.landing {
+  height: 90%;
+  display: flex;
+  position: relative;
+  top: 10%;
+  /* justify-content: space-around; */
+  /* align-items: center; */
+}
+
+.left {
+  width: 40%;
+  background: url(./Assests/main.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right {
+  padding: 40px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#line--1 {
+  font-size: 4em;
+}
+
+#line--2 {
+  font-size: 2em;
+}
+
+.apply {
+  padding: 14px;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  background-color: #072541;
+  color: white;
+  border-radius: 9px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.criteria {
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-name: popup;
+  animation-duration: 1s;
+}
+
+.criteria--container {
+  color: white;
+  width: 90vw;
+  min-height: 300px;
+  padding: 20px;
+  background-color: #072541;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.criteria--box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.box {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.box p {
+  height: 50px;
+}
+
+.box2 {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+.hidden {
+  display: none;
+}
+
+.fa-check {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5em;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #ffb000;
+}
+
+#line--3 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.account {
+  margin-bottom: 100px;
+}
+
+.account--container {
+  background-color: rgb(244, 242, 242);
+  padding: 60px 20px;
+  /* height: 300px; */
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.account--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.account--right {
+  background: url(./Assests/card.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#line--4 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#line--5 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.signinbtn {
+  padding: 14px;
+  font-size: 1.2em;
+  font-family: 'Poppins', sans-serif;
+  background-color: #072541;
+  color: white;
+  border-radius: 9px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.services {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services h1 {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 60px;
+  font-size: 2em;
+}
+
+.service--1 {
+  padding: 20px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #072541;
+  color: white;
+  border-radius: 9px;
+  margin-bottom: 60px;
+}
+.service--text {
+  line-height: 30px;
+  text-align: justify;
+}
+.service--text h1 {
+  margin-bottom: 20px;
+  text-align: start;
+  color: #ffb000;
+}
+.service--image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10em;
+  color: #ffb000;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 0px;
+  background-color: rgb(244, 242, 242);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #ffb000;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  width: 60%;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+address {
+  margin-bottom: 20px;
+}
+
+.social {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.social i {
+  font-size: 2em;
+}
+
+.credits {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #072541;
+  color: #ffb000;
+}
+
+.navbar {
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  background-color: #072541;
+  z-index: 1000;
+  animation-name: navbaron;
+  animation-duration: 0.5s;
+}
+.navbar nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: white;
+  margin: 40px 0px;
+  font-size: 1.2em;
+}
+
+@media (max-width: 1058px) {
+  .header {
+    grid-template-columns: 3fr 1fr;
+  }
+  .nav a {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    justify-content: end;
+  }
+  .navtoggle {
+    display: block;
+    color: white;
+    font-size: 2em;
+    margin-right: 10px;
+  }
+  #line--1 {
+    font-size: 3.5em;
+  }
+
+  #line--2 {
+    font-size: 1.8em;
+  }
+
+  .apply {
+    padding: 14px;
+    font-size: 1em;
+    width: 200px;
+  }
+}
+
+@media (max-width: 941px) {
+  #line--1 {
+    font-size: 3em;
+  }
+
+  #line--2 {
+    font-size: 1.5em;
+  }
+
+  .apply {
+    padding: 12px;
+    font-size: 1em;
+    width: 180px;
+  }
+}
+
+@media (max-width: 728px) {
+  #line--2 {
+    font-size: 1.2em;
+  }
+  .social {
+    width: 50%;
+    align-self: center;
+  }
+  .social i {
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 653px) {
+  #line--1 {
+    font-size: 2.4em;
+  }
+  #line--2 {
+    font-size: 1.3em;
+  }
+
+  #line--3 {
+    font-size: 1.4em;
+  }
+
+  #line--5 {
+    font-size: 1.2em;
+  }
+  .account--container {
+    padding: 30px 20px;
+  }
+
+  .apply {
+    padding: 10px;
+    font-size: 0.8em;
+    width: 160px;
+  }
+  .criteria {
+    margin: 50px 0px;
+  }
+  .account {
+    margin-bottom: 50px;
+  }
+  .services {
+    margin-bottom: 0px;
+  }
+
+  .service--1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .service--text h1 {
+    text-align: center;
+  }
+
+  .service--image {
+    font-size: 5em;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 548px) {
+  .box {
+    font-size: 0.8em;
+  }
+
+  .box i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #line--4 {
+    font-size: 2em;
+  }
+
+  #line--5 {
+    font-size: 1em;
+  }
+  .signinbtn {
+    padding: 10px;
+    font-size: 1em;
+    width: 150px;
+  }
+
+  .service--text h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 484px) {
+  .landing {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .right {
+    padding: 10px;
+  }
+  .apply {
+    align-self: center;
+  }
+  #line--1 {
+    font-size: 2em;
+  }
+
+  #line--2 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer p {
+    font-size: 0.6em;
+  }
+}
+
+@keyframes navbaron {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+}
